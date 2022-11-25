@@ -1,0 +1,24 @@
+# Los archivos docker-compose.yml son versionados, lo que significa que es muy importante indicar la versión de las instrucciones que queremos darle.
+version: "3.9"
+
+# Servidor nginx
+services:
+  web:
+    image: nginx:latest
+    # Puerto 8080 
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php-fpm
+
+  # Configuración de php
+  php-fpm:
+    image: php:8-fpm
+    volumes:
+      - ./:/var/www/html
+    build:
+      context: .
+      dockerfile: ./Dockerfile

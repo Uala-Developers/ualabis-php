@@ -1,0 +1,42 @@
+name: Test analysis
+
+on:
+  pull_request: 
+    branches:
+      - main
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  Analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+
+      - name: Start Mockoon mock server
+        run: |
+          npm install -g @mockoon/cli
+          mockoon-cli start --data ./tests/dataMockTest.json
+
+      - name: Setup PHP with Xdebug
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+          coverage: xdebug
+
+      - name: Install dependencies with composer
+        run: composer update --no-ansi --no-interaction --no-progress
+
+      - name: Check Lint
+        run: composer lint
+
+      - name: Run tests with phpunit/phpunit
+        run: composer coverage
