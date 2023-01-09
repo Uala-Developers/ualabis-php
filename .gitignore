@@ -1,0 +1,7 @@
+.idea/
+vendor/
+.phpdoc
+composer.lock
+coverage
+coverage.xml
+.DS_Store

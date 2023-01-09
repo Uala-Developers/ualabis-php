@@ -1,0 +1,88 @@
+{
+  "uuid": "",
+  "lastMigration": 13,
+  "name": "Mock for CURL Tests",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "routes": [
+    {
+      "uuid": "",
+      "documentation": "Get endpoint",
+      "method": "get",
+      "endpoint": "get-example",
+      "responses": [
+        {
+          "uuid": "",
+          "body": "{\"status\": \"200\"}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false
+    },
+    {
+      "uuid": "",
+      "documentation": "Post endpoint",
+      "method": "post",
+      "endpoint": "post-example",
+      "responses": [
+        {
+          "uuid": "",
+          "body": "{\"status\": \"201\"}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Created",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "https": false,
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
