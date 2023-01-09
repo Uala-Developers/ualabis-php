@@ -42,15 +42,15 @@
   <table>
     <tr>
       <th>uuid</th>
-      <th><? echo $order->uuid ?></th>
+      <th><?php echo $order->uuid ?></th>
     </tr>
     <tr>
       <td>amount</td>
-      <td><? echo $order->amount ?></td>
+      <td><?php echo $order->amount ?></td>
     </tr>
     <tr>
       <td>checkout link</td>
-      <td><a href="<? echo $order->links->checkoutLink ?>"><? echo $order->links->checkoutLink ?></a></td>
+      <td><a href="<?php echo $order->links->checkoutLink ?>"><?php echo $order->links->checkoutLink ?></a></td>
     </tr>
   </table>
 
@@ -58,15 +58,15 @@
   <table>
     <tr>
       <th>uuid</th>
-      <th><? echo $generatedOrder->order_id ?></th>
+      <th><?php echo $generatedOrder->order_id ?></th>
     </tr>
     <tr>
       <td>status</td>
-      <td><? echo $generatedOrder->status ?></td>
+      <td><?php echo $generatedOrder->status ?></td>
     </tr>
     <tr>
       <td>amount</td>
-      <td><? echo $generatedOrder->amount ?></td>
+      <td><?php echo $generatedOrder->amount ?></td>
     </tr>
   </table>
 

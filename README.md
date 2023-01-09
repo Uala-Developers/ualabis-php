@@ -1,4 +1,4 @@
-# uala-adquirencia-api-checkout-sdk-php
+# ualabis-php
 
 Official PHP SDK for Ualá Bis API Checkout
 
