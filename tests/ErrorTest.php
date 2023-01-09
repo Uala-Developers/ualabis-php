@@ -5,9 +5,7 @@ declare(strict_types=1);
 require_once('vendor/autoload.php');
 
 use PHPUnit\Framework\TestCase;
-// use Uala\HttpRequest;
 use Uala\Error;
-// use Mockery;
 
 final class ErrorTest extends TestCase
 {

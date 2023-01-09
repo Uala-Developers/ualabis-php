@@ -23,11 +23,7 @@ class HttpRequest
 
     private static function getHeaders($headers)
     {
-        $finalHeaders = self::$defaultHeaders;
-        foreach ($headers as $header) {
-            $finalHeaders[] = $header;
-        }
-        return $finalHeaders;
+        return array_merge(self::$defaultHeaders, $headers);
     }
 
     private static function execute($curl)
