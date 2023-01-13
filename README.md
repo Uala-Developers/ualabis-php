@@ -19,7 +19,7 @@ SDK PHP oficial de Ualá Bis API Checkout
 Install the package with:
 
 ```sh
-composer require uala/ualabis-php
+composer require uala-bis/ualabis-php
 ```
 
 ## Functions
@@ -83,7 +83,7 @@ We use ```XDebug``` for coverage report, is necessary to install it: [how to ins
 Instale el paquete con el siguiente comando:
 
 ```sh
-composer require uala/ualabis-php
+composer require uala-bis/ualabis-php
 ```
 
 ## Funciones
