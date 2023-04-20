@@ -106,6 +106,11 @@ Search.appendIndex(
             "summary": "Get\u0020a\u0020list\u0020of\u0020failed\u0020notifications\u0020via\u0020webhook\u0020that\u0020could\u0020not\u0020be\u0020completed\u0020with\u0020HTTP\u0020Status\u0020200",
             "url": "classes/Uala-SDK.html#method_getFailedNotifications"
         },                {
+            "fqsen": "\\Uala\\SDK\u003A\u003AgetOrders\u0028\u0029",
+            "name": "getOrders",
+            "summary": "Get\u0020a\u0020list\u0020of\u0020orders\u0020that\u0020be\u0020created",
+            "url": "classes/Uala-SDK.html#method_getOrders"
+        },                {
             "fqsen": "\\Uala\\SDK\u003A\u003A\u0024config",
             "name": "config",
             "summary": "",

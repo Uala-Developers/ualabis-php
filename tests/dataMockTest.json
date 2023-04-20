@@ -36,6 +36,34 @@
     },
     {
       "uuid": "",
+      "documentation": "Get orders endpoint",
+      "method": "get",
+      "endpoint": "get-orders-example",
+      "responses": [
+        {
+          "uuid": "",
+          "body": "{\"status\": \"200\"}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false
+    },
+    {
+      "uuid": "",
       "documentation": "Post endpoint",
       "method": "post",
       "endpoint": "post-example",

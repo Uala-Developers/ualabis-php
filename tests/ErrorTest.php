@@ -9,17 +9,17 @@ use Uala\Error;
 
 final class ErrorTest extends TestCase
 {
-  protected function tearDown(): void
-  {
-    \Mockery::close();
-  }
+    protected function tearDown(): void
+    {
+        \Mockery::close();
+    }
 
-  public function testErrorUserNotFound()
-  {
+    public function testErrorUserNotFound()
+    {
 
-    $e = new Error('User account not found', '3003', 401);
-    $this->assertEquals($e->getErrorType(), 'user_no_exist');
-    $this->assertEquals($e->getMessage(), 'User account not found');
-    $this->assertEquals($e->getStatusCode(), 401);
-  }
+        $e = new Error('User account not found', '3003', 401);
+        $this->assertEquals('user_no_exist', $e->getErrorType());
+        $this->assertEquals('User account not found', $e->getMessage());
+        $this->assertEquals(401, $e->getStatusCode());
+    }
 }
