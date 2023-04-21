@@ -12,14 +12,14 @@ class HttpRequestTest extends TestCase
      * @runInSeparateProcess
      * @preserveGlobalState disabled
      */
-    public function testGet()
+    public function testGetOrder()
     {
         $url = 'http://localhost:3000/get-example';
         $request = Uala\HttpRequest::get($url, [''], ['']);
         $this->assertEquals(200, $request->status);
     }
 
-    public function testGetWithError()
+    public function testGetOrderWithError()
     {
         $this->expectException(\Uala\Error::class);
         $url = 'http://localhost:3000/get-example-error';
@@ -35,5 +35,19 @@ class HttpRequestTest extends TestCase
         $url = 'http://localhost:3000/post-example';
         $request = Uala\HttpRequest::post($url, [''], ['']);
         $this->assertEquals(201, $request->status);
+    }
+
+    public function testGetOrders()
+    {
+        $url = 'http://localhost:3000/get-orders-example';
+        $request = Uala\HttpRequest::get($url, [''], ['']);
+        $this->assertEquals(200, $request->status);
+    }
+
+    public function testGetOrdersWithError()
+    {
+        $this->expectException(\Uala\Error::class);
+        $url = 'http://localhost:3000/get-orders-example-error';
+        $request = Uala\HttpRequest::get($url, [''], ['']);
     }
 }

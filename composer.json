@@ -30,5 +30,8 @@
     "phpunit/phpunit": "^9.5",
     "mockery/mockery": "^1.5",
     "squizlabs/php_codesniffer": "3.*"
+  },
+  "require": {
+    "ext-curl": "*"
   }
 }
